@@ -13,16 +13,13 @@ public class CajaColisionDetection : MonoBehaviour
       cajaMovementScript = GetComponent<CajaMovement>();  
     }
 
-
-
-
-
-
-
      void OnCollisionEnter(Collision col)
      {
         if(col.gameObject.CompareTag("piso")){
-           cajaMovementScript.MoveBoxToRandomPosition();
+          cajaMovementScript.AumentarVelocidad(0.2f);
+         cajaMovementScript.MoveBoxToRandomPosition();
+          
+   
         }
      }
 }
